@@ -23,15 +23,26 @@ mixin page-header(mods)
       .page-header__top
         +logo(href="#")
           img(src='images/logo.svg', alt='Логотип Senurable')
+        +button('Калькулятор стоимости')(type='button').page-header__calculator
         +burger().page-header__burger
-      +breadcrumbs()
+      +social().page-header__social
+        +social-item('Фейсбук', 'https://www.facebook.com/')
+          +svg-info('16', '16', '0 0 16 16', 'facebook')
+        +social-item('Вконтакте', '/')
+          +svg-info('16', '9', '0 0 30 20', 'vk')
+        +social-item('Linkedin', '/')
+          +svg-info('13', '13', '0 0 20 20', 'in')
+        +social-item('Behance', '/')
+          +svg-info('18', '15', '0 0 27 18', 'be')
+      +breadcrumbs().page-header__breadcrumbs
         +breadcrumbs-item('Главная', '/home')
         +breadcrumbs-item('Услуги', '/services')
         +breadcrumbs-item('Разработка сайтов для бизнеса')
-      h1.page-header__title #[strong Разработка сайтов] для бизнеса
-      ul.page-header__description-list
-        li.page-header__description-item
-          | Мы разрабатываем красивые качественные сайты, с использованием современных технологий.
-        li.page-header__description-item
-          | Выведем бизнес на новый уровень.
-      +button('Запрос оценки стоимости')(type='button')
+      .page-header__info
+        h1.page-header__title #[strong Разработка сайтов] для бизнеса
+        ul.page-header__description-list
+          li.page-header__description-item
+            | Мы разрабатываем красивые качественные сайты, с использованием современных технологий.
+          li.page-header__description-item
+            | Выведем бизнес на новый уровень.
+        +button('Запрос оценки стоимости')(type='button')
