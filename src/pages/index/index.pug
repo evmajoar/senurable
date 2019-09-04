@@ -5,6 +5,7 @@ extends ../../layouts/layout.pug
 include ../../sections/page-header/page-header.pug
 include ../../sections/page-footer/page-footer.pug
 include ../../blocks/logo/logo.pug
+include ../../blocks/breadcrumbs/breadcrumbs
 include ../../sections/about-us/about-us.pug
 
 block meta
@@ -12,8 +13,6 @@ block meta
   meta(name='description', content='')
 
 block header
-  +logo()
-    img(src='images/logo.svg', width='131', height='37', alt='Логотип Senurable')
   +page-header()
 
 block content

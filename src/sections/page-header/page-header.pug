@@ -20,3 +20,18 @@ mixin page-header(mods)
   header.page-header(class=allMods, role='banner')&attributes(attributes)
     .page-header__inner
       block
+      .page-header__top
+        +logo(href="#")
+          img(src='images/logo.svg', alt='Логотип Senurable')
+        +burger().page-header__burger
+      +breadcrumbs()
+        +breadcrumbs-item('Главная', '/home')
+        +breadcrumbs-item('Услуги', '/services')
+        +breadcrumbs-item('Разработка сайтов для бизнеса')
+      h1.page-header__title #[strong Разработка сайтов] для бизнеса
+      ul.page-header__description-list
+        li.page-header__description-item
+          | Мы разрабатываем красивые качественные сайты, с использованием современных технологий.
+        li.page-header__description-item
+          | Выведем бизнес на новый уровень.
+      +button('Запрос оценки стоимости')(type='button')

@@ -39,15 +39,13 @@ html(class='page', lang='ru')
     .page__inner
       .page__content
 
-        +page-header()
-          block header
+        block header
 
         main.page-main
           block content
 
       .page__footer-wrapper
-        +page-footer()
-          block footer
+        block footer
 
     block bottom
       script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
