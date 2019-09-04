@@ -24,19 +24,22 @@ $color-gh:                    #24292e;
 
 $color-pink:                  #E84A61;
 $color-dark-grey:             #333333;
+$color-darken-grey:           #444444;
+$color-light-grey:            #777777;
+$color-lighten-grey:          #999999;
 
 
 
 // Семантические цвета
 
-$text-color:                  $gray-darkest;
+$text-color:                  $color-light-grey;
 $text-color-muted:            $gray;
 $body-bg:                     $white;
 
-$link-color:                  $color-main;
-$link-color--hover:           darken($color-main, 15%);
+$link-color:                  inherit;
+//$link-color--hover:           darken($color-main, 15%);
 
-$border-color:                $gray-lighten;
+//$border-color:                $gray-lighten;
 
 
 
