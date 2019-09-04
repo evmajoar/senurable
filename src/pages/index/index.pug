@@ -5,15 +5,18 @@ extends ../../layouts/layout.pug
 include ../../sections/page-header/page-header.pug
 include ../../sections/page-footer/page-footer.pug
 include ../../blocks/logo/logo.pug
+include ../../sections/about-us/about-us.pug
 
 block meta
   title Главная страница
   meta(name='description', content='')
 
 block header
-  logo()
-    img('images/logo.svg', width='131', height='37', alt='Логотип Senurable')
+  +logo()
+    img(src='images/logo.svg', width='131', height='37', alt='Логотип Senurable')
 
 block content
+  +about-us('Почему клиенты обращаются к нам', 'Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.')
+
 
 block footer
