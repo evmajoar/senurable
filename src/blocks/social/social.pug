@@ -54,9 +54,9 @@ mixin svg-info(width, height, viewBox, iconName, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-      allMods = allMods + ' svg-info--' + modsList[i].trim();
+      allMods = allMods + ' social__svg--' + modsList[i].trim();
       }
     }
 
-  svg(width=width, height=height, viewBox=viewBox)
+  svg.social__svg(width=width, height=height, viewBox=viewBox)(class=allMods)
     use(xlink:href='icons/sprite.svg#icon-' + iconName)
