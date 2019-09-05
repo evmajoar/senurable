@@ -1,0 +1,27 @@
+.breadcrumbs{
+  @include ul-reset;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item{
+    font-weight: 200;
+    &:not(:last-child){
+      position: relative;
+      margin-right: 35px;
+      &:after{
+        @include pseudo;
+        right: -27px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 17px;
+        height: 8px;
+        background-image: url('#{$imageDir}arrow.svg');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__link{
+    text-decoration: none;
+  }
+}
