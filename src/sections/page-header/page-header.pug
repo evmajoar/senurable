@@ -21,9 +21,9 @@ mixin page-header(mods)
     .page-header__inner
       block
       .page-header__top
-        +logo(href="#")
-          img(src='images/logo.svg', alt='Логотип Senurable')
-        +button('Калькулятор стоимости')(type='button').page-header__calculator
+        +logo(href="#").page-header__logo
+          img(src='images/logo.svg', alt='Логотип Senurable').page-header__img
+        +button('Калькулятор стоимости', 'pink, calculator, bold, text-small, uppercase')(type='button').page-header__calculator
         +burger().page-header__burger
       +social().page-header__social
         +social-item('Фейсбук', 'https://www.facebook.com/')
@@ -39,10 +39,12 @@ mixin page-header(mods)
         +breadcrumbs-item('Услуги', '/services')
         +breadcrumbs-item('Разработка сайтов для бизнеса')
       .page-header__info
-        h1.page-header__title #[strong Разработка сайтов] для бизнеса
+        h1.page-header__title
+          strong.page-header__title-strong Разработка сайтов
+          | для бизнеса
         ul.page-header__description-list
           li.page-header__description-item
             | Мы разрабатываем красивые качественные сайты, с использованием современных технологий.
           li.page-header__description-item
             | Выведем бизнес на новый уровень.
-        +button('Запрос оценки стоимости')(type='button')
+        +button('Запрос оценки стоимости', 'pink, shift-left, bold, line')(type='button')
