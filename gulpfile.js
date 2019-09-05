@@ -161,7 +161,7 @@ exports.optimizeSvg = optimizeSvg;
 // Конвертация изображений в WebP
 function convertImagesToWebp() {
   return src( `${root.src}theme/images/*.{jpg,png,svg}` )
-    .pipe( imagemin([webp({quality: 75} )] ) )
+    .pipe( imagemin([webp({quality: 100} )] ) )
     .pipe( rename({extname: '.webp'} ) )
     .pipe( rename({dirname: ''} ) )
     .pipe( dest( path.build.img ) )
