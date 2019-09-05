@@ -4,53 +4,39 @@
 
 .button {
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
   max-width: 100%;
-  overflow: hidden;
+  min-height: 40px;
   margin: 0;
-  border-radius: $border-radius;
-  // border: 1px solid $gray-lighter;
-  border: 0;
-  padding: $field-padding-vertical  $field-padding-horizontal;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  user-select: none;
-  text-align: center;
-  font-size: 1em;
+  padding: $field-padding-vertical $field-padding-horizontal;
   font-family: inherit;
+  font-size: $font-size;
+  color: $white;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
-  background-color: $gray-lightest;
-  background-image: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+  background-color: transparent;
+  border: 0;
+  vertical-align: middle;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: $text-color;
-    background-color: darken($gray-lightest, 10%);
-    // border-color: darken($gray-lighter, 12%);
-  }
+  transition: all $transition-time;
 
   // &:visited {
   //   color: $text-color;
   // }
 
-  &:active,
-  &:focus {
-    @include field-focus;
-  }
+  //&:active,
+  //&:focus {
+  //  @include field-focus;
+  //}
 
   &--disabled,
   &:disabled {
     opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    // border-color: $gray-lighter;
 
     @at-root a.btn--disabled {
       pointer-events: none;
@@ -61,7 +47,6 @@
   //   display: inline-block;
   //   vertical-align: middle;
   // }
-
 
 
   // &--main {
@@ -83,4 +68,52 @@
   //     // border-color: $color-main;
   //   }
   // }
+
+  // цвета
+  &--pink {
+    background-color: $color-pink;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-pink, 5%);
+    }
+  }
+
+  // размеры
+  &--shift-left {
+    padding-left: 10px;
+    padding-right: 40px;
+  }
+
+  &--calculator {
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+
+  // текст
+  &--bold {
+    font-weight: 600;
+  }
+
+  &--text-small {
+    font-size: 12px;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  // доп.элементы
+  &--line {
+    position: relative;
+
+    &:after {
+      @include pseudo;
+      right: -25px;
+      top: 52%;
+      width: 50px;
+      height: 1px;
+      background-color: $white;
+    }
+  }
 }
