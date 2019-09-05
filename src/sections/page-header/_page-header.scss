@@ -7,9 +7,9 @@
   padding: 23px 0 135px;
   color: $white;
   background-color: rgba(51, 51, 51, 0.8);
-  background-image: url('#{$imageDir}bg-header-tablet2.jpg');
+  background-image: url('#{$imageDir}bg-header-desktop2.jpg');
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: bottom left 28%;
   background-size: cover;
 
   &:after {
@@ -24,11 +24,14 @@
   }
 
   @media (min-width: $screen-md-small) {
-    background-position: right bottom;
+    background-position: bottom left;
+  }
+
+  @media (min-width: $screen-md) {
+    background-position: bottom right 50%;
   }
 
   @media (min-width: $screen-xl) {
-    background-image: url('#{$imageDir}bg-header-desktop2.jpg');
     background-position: center bottom;
   }
 
