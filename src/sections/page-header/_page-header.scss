@@ -3,21 +3,32 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-header {
+  position: relative;
   padding: 23px 0 135px;
   color: $white;
   background-color: rgba(51, 51, 51, 0.8);
-  background-image: url('#{$imageDir}bg-header-mobile.jpg');
+  background-image: url('#{$imageDir}bg-header-tablet2.jpg');
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: left bottom;
   background-size: cover;
 
+  &:after {
+    @include pseudo;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -21px;
+    width: 85px;
+    height: 70px;
+    background-image: url('#{$imageDir}triangle.svg');
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: $screen-md) {
-    background-image: url('#{$imageDir}bg-header-tablet.jpg');
     background-position: right bottom;
   }
 
   @media (min-width: $screen-xl) {
-    background-image: url('#{$imageDir}bg-header-desktop.jpg');
+    background-image: url('#{$imageDir}bg-header-desktop2.jpg');
     background-position: center bottom;
   }
 
@@ -43,14 +54,14 @@
     }
   }
 
-  &__logo{
+  &__logo {
     @media (min-width: $screen-md) {
       width: 190px;
       height: 55px;
     }
   }
 
-  &__img{
+  &__img {
     height: 100%;
   }
 
@@ -79,13 +90,13 @@
       right: 0;
     }
 
-    @media (min-width: $screen-lg) {
-      right: 90px;
+    @media (min-width: $screen-xl) {
+      right: 80px;
       top: 200px;
     }
   }
 
-  &__breadcrumbs{
+  &__breadcrumbs {
     margin-bottom: 55px;
     @media (min-width: $screen-md) {
       margin-bottom: 70px;
@@ -95,11 +106,14 @@
     }
   }
 
-  &__info{
+  &__info {
     max-width: 450px;
+    @media (min-width: $screen-xl) {
+      max-width: 460px;
+    }
   }
 
-  &__title{
+  &__title {
     margin: 0;
     margin-bottom: 25px;
     font-size: 24px;
@@ -113,7 +127,7 @@
     }
   }
 
-  &__title-strong{
+  &__title-strong {
     display: block;
     font-size: 24px;
     font-weight: 700;
@@ -125,7 +139,7 @@
     }
   }
 
-  &__description-list{
+  &__description-list {
     @include ul-reset;
     margin-bottom: 35px;
     @media (min-width: $screen-md) {
@@ -137,9 +151,10 @@
     }
   }
 
-  &__description-item{
+  &__description-item {
     font-weight: 200;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
