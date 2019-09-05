@@ -45,7 +45,7 @@ $link-color:                  inherit;
 
 // Базовая типографика
 
-$font-size:                   16px;
+$font-size:                   14px;
 
 $font-size-h1:                40px;
 $font-size-h2:                32px;
@@ -71,11 +71,11 @@ $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
-$screen-xl:                   1200px;
+$screen-xl:                   1100px;
 $screen-xxl:                  1800px;
 
 $container-sm:                100%;
-$container-md:                100%;
+$container-md:                640px;
 $container-lg:                $screen-lg - 30;
 $container-xl:                $screen-xl - 30;
 $container-xxl:               $screen-xxl - 30;
@@ -91,8 +91,8 @@ $grid-gutter-width:           30px;
 
 // Разное
 
-$field-padding-vertical:      5px;
-$field-padding-horizontal:    12px;
+$field-padding-vertical:      10px;
+$field-padding-horizontal:    30px;
 
 $border-radius:               3px;
 $opacity:                     0.7;
