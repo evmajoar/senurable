@@ -69,12 +69,14 @@ $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation
 
 $screen-xs:                   0;
 $screen-sm:                   480px;
+$screen-md-small:             576px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1100px;
 $screen-xxl:                  1800px;
 
 $container-sm:                100%;
+$container-md-small:          480px;
 $container-md:                640px;
 $container-lg:                $screen-lg - 30;
 $container-xl:                $screen-xl - 30;
