@@ -76,7 +76,7 @@
     }
   }
 
-  &__calculator {
+  &__button {
     display: none;
     @media (min-width: $screen-md) {
       display: block;
@@ -94,8 +94,8 @@
     }
 
     @media (min-width: $screen-xl) {
-      right: 80px;
-      top: 200px;
+      right: 15px;
+      top: 220px;
     }
   }
 
