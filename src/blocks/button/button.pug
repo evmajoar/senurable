@@ -17,20 +17,20 @@ mixin button(text, mods, isInput)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' btn--' + modsList[i].trim();
+        allMods = allMods + ' button--' + modsList[i].trim();
       }
     }
 
   //- передан href — это ссылка
   if (attributes.href)
-    a.btn(class=allMods)&attributes(attributes)!= text
+    a.button(class=allMods)&attributes(attributes)!= text
       block
 
   //- иначе, если передан isInput и он true, это input
   else if (typeof(isInput) !== 'undefined' && isInput)
-    input.btn(class=allMods, value=text, type='button')&attributes(attributes)
+    input.button(class=allMods, value=text, type='button')&attributes(attributes)
 
   //- иначе это button
   else
-    button.btn(class=allMods)&attributes(attributes)!= text
+    button.button(class=allMods)&attributes(attributes)!= text
       block
