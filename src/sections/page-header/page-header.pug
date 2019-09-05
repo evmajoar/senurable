@@ -8,42 +8,42 @@ mixin page-header(mods)
         +page-header()
           p «Шапка»
   -
-    // список модификаторов
+  // список модификаторов
     var allMods = '';
     if(typeof(mods) !== 'undefined' && mods) {
-      var modsList = mods.split(',');
-      for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' page-header--' + modsList[i].trim();
-      }
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+    allMods = allMods + ' page-header--' + modsList[i].trim();
+    }
     }
 
   header.page-header(class=allMods)&attributes(attributes)
     .page-header__inner
       .page-header__top
-        +logo(href="#").page-header__logo
+        +logo('#', 'small')
           img(src='images/logo.svg', alt='Логотип Senurable').page-header__img
         +button('Калькулятор стоимости', 'pink, calculator, bold, text-small, uppercase')(type='button').page-header__button
         +burger().page-header__burger
-      +social().page-header__social
-        +social-item('Фейсбук', 'https://www.facebook.com/')
-          +social-icon('16', '16', '0 0 16 16', 'facebook')
-        +social-item('Вконтакте', '/')
-          +social-icon('16', '9', '0 0 30 20', 'vk')
-        +social-item('Linkedin', '/')
-          +social-icon('13', '13', '0 0 20 20', 'in')
-        +social-item('Behance', '/')
-          +social-icon('18', '15', '0 0 27 18', 'be')
       +breadcrumbs().page-header__breadcrumbs
         +breadcrumbs-item('Главная', '/home')
         +breadcrumbs-item('Услуги', '/services')
         +breadcrumbs-item('Разработка сайтов для бизнеса')
-      .page-header__info
-        h1.page-header__title
-          strong.page-header__title-strong Разработка сайтов
-          | для бизнеса
-        ul.page-header__description-list
-          li.page-header__description-item
+      section.page-header__info
+        .page-header__info-text
+          h1.page-header__title
+            strong.page-header__title-strong Разработка сайтов
+            | для бизнеса
+          p.page-header__description
             | Мы разрабатываем красивые качественные сайты, с использованием современных технологий.
-          li.page-header__description-item
+          p.page-header__description
             | Выведем бизнес на новый уровень.
-        +button('Запрос оценки стоимости', 'pink, shift-left, bold, line')(type='button')
+          +button('Запрос оценки стоимости', 'pink, shift-left, bold, line')(type='button').page-header__button-request
+        +social().page-header__social
+          +social-item('Фейсбук', 'https://www.facebook.com/')
+            +social-icon('16', '16', '0 0 16 16', 'facebook')
+          +social-item('Вконтакте', '/')
+            +social-icon('16', '9', '0 0 30 20', 'vk')
+          +social-item('Linkedin', '/')
+            +social-icon('13', '13', '0 0 20 20', 'in')
+          +social-item('Behance', '/')
+            +social-icon('18', '15', '0 0 27 18', 'be')
