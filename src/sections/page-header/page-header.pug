@@ -19,7 +19,6 @@ mixin page-header(mods)
 
   header.page-header(class=allMods)&attributes(attributes)
     .page-header__inner
-      block
       .page-header__top
         +logo(href="#").page-header__logo
           img(src='images/logo.svg', alt='Логотип Senurable').page-header__img
@@ -27,13 +26,13 @@ mixin page-header(mods)
         +burger().page-header__burger
       +social().page-header__social
         +social-item('Фейсбук', 'https://www.facebook.com/')
-          +svg-info('16', '16', '0 0 16 16', 'facebook')
+          +social-icon('16', '16', '0 0 16 16', 'facebook')
         +social-item('Вконтакте', '/')
-          +svg-info('16', '9', '0 0 30 20', 'vk')
+          +social-icon('16', '9', '0 0 30 20', 'vk')
         +social-item('Linkedin', '/')
-          +svg-info('13', '13', '0 0 20 20', 'in')
+          +social-icon('13', '13', '0 0 20 20', 'in')
         +social-item('Behance', '/')
-          +svg-info('18', '15', '0 0 27 18', 'be')
+          +social-icon('18', '15', '0 0 27 18', 'be')
       +breadcrumbs().page-header__breadcrumbs
         +breadcrumbs-item('Главная', '/home')
         +breadcrumbs-item('Услуги', '/services')

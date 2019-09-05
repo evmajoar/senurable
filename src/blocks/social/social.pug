@@ -46,7 +46,7 @@ mixin social-item(text, href, mods)
       block
 
 
-mixin svg-info(width, height, viewBox, iconName, mods)
+mixin social-icon(width, height, viewBox, iconName, mods)
 
   -
     // список модификаторов
@@ -58,5 +58,5 @@ mixin svg-info(width, height, viewBox, iconName, mods)
       }
     }
 
-  svg.social__svg(width=width, height=height, viewBox=viewBox)(class=allMods)
+  svg.social__icon(width=width, height=height, viewBox=viewBox)(class=allMods)
     use(xlink:href='icons/sprite.svg#icon-' + iconName)
