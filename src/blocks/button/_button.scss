@@ -80,10 +80,21 @@
     }
   }
 
-  // размеры
-  &--shift-left {
+
+  // уникальные кнопки
+  &--line{
+    position: relative;
     padding-left: 10px;
     padding-right: 40px;
+
+    &:after {
+      @include pseudo;
+      right: -25px;
+      top: 52%;
+      width: 50px;
+      height: 1px;
+      background-color: $white;
+    }
   }
 
   // текст
@@ -95,17 +106,4 @@
     text-transform: uppercase;
   }
 
-  // доп.элементы
-  &--line {
-    position: relative;
-
-    &:after {
-      @include pseudo;
-      right: -25px;
-      top: 52%;
-      width: 50px;
-      height: 1px;
-      background-color: $white;
-    }
-  }
 }
