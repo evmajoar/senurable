@@ -4,6 +4,7 @@ mixin breadcrumbs(mods)
 
   //- Принимает:
   //-   mods  {string} - список модификаторов
+
   //- Вызов:
         +breadcrumbs()
           +breadcrumbs-item('Главная', '/home')
@@ -18,17 +19,17 @@ mixin breadcrumbs(mods)
       }
     }
 
-  ul.breadcrumbs(class=allMods, aria-label='Breadcrumb')&attributes(attributes)
+  ol.breadcrumbs(class=allMods, aria-label='Breadcrumb', itemscope itemtype='http://schema.org/BreadcrumbList')&attributes(attributes)
     block
 
 
-
-mixin breadcrumbs-item(text, href, mods)
+mixin breadcrumbs-item(index, text, href, mods)
 
   //- Принимает:
   //-   text   {string} - содержимое пункта
   //-   href   {string} - ссылка этого пункта (если пустая, то это не ссылка, а span)
   //-   mods   {string} - список модификаторов
+
   -
     // список модификаторов
     var allMods = '';
@@ -39,8 +40,11 @@ mixin breadcrumbs-item(text, href, mods)
       }
     }
 
-  li.breadcrumbs__item(class=allMods)&attributes(attributes)
+  li.breadcrumbs__item(class=allMods, itemprop='itemListElement', itemscope itemtype='http://schema.org/ListItem')&attributes(attributes)
     if(typeof(href) !== 'undefined' && href)
-      a.breadcrumbs__link(href=href)!= text
+      a.breadcrumbs__link(href=href, itemprop='item')
+        span.breadcrumbs__name(itemprop='name')!= text
+        meta(property='position' content=index)
     else
-      span.breadcrumbs__current!= text
+      span.breadcrumbs__current(itemprop='item')
+        span.breadcrumbs__name(itemprop='name')!= text
