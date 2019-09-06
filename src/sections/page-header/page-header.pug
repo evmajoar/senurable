@@ -22,7 +22,7 @@ mixin page-header(mods)
       .page-header__top
         +logo('#', 'small')
           img(src='images/logo.svg', alt='Логотип Senurable').page-header__img
-        +button('Калькулятор стоимости', 'pink, calculator, bold, text-small, uppercase')(type='button').page-header__button
+        +button('Рассчитать стоимость', 'pink, text-small, uppercase')(type='button').page-header__button
         +burger().page-header__burger
       +breadcrumbs().page-header__breadcrumbs
         +breadcrumbs-item('Главная', '/home')

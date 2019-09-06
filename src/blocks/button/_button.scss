@@ -11,6 +11,7 @@
   padding: $field-padding-vertical $field-padding-horizontal;
   font-family: inherit;
   font-size: $font-size;
+  font-weight: 600;
   color: $white;
   line-height: $line-height;
   text-decoration: none;
@@ -85,16 +86,7 @@
     padding-right: 40px;
   }
 
-  &--calculator {
-    padding-right: 10px;
-    padding-left: 20px;
-  }
-
   // текст
-  &--bold {
-    font-weight: 600;
-  }
-
   &--text-small {
     font-size: 12px;
   }
