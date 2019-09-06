@@ -25,7 +25,7 @@ mixin about-us(title, description, mods)
 
   section.about-us(class=allMods)&attributes(attributes)
     .about-us__inner
-      h2.about-us__title!= title
+      +title(title, 'grey, angle, about-us')
       p.about-us__description!= description
       ul.about-us__list
         each aboutUsItem in aboutUsList
@@ -35,8 +35,8 @@ mixin about-us(title, description, mods)
 mixin about-us-item(item)
 
   li.about-us__item
-    strong
-      svg(width=item.iconSize.width, height=item.iconSize.height)
-        use(xlink:href='images/icons/sprite.svg#icon-' + item.iconId)
+    strong.about-us__item-title
+      svg.about-us__icon(width=item.iconSize.width, height=item.iconSize.height)
+        use(xlink:href='icons/sprite.svg#icon-' + item.iconId)
       != item.title
-    p!= item.text
+    p.about-us__item-description!= item.text

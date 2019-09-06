@@ -2,5 +2,179 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 
 .about-us {
+  margin-bottom: 110px;
+  padding-top: 35px;
+  background-color: $section-bg;
+  @media (min-width: $screen-md) {
+    margin-bottom: 400px;
+    padding-top: 80px;
+  }
 
+  @media (min-width: $screen-xxl) {
+    margin-bottom: 0;
+    padding-bottom: 115px;
+    overflow: hidden;
+  }
+
+  &__inner {
+    @include container;
+  }
+
+  &__description {
+    margin: 0;
+    margin-top: 15px;
+    @media (min-width: $screen-md) {
+      max-width: 610px;
+      margin-top: 25px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: 450px;
+    }
+  }
+
+  &__list {
+    @include ul-reset;
+    position: relative;
+    margin-top: 25px;
+    padding-bottom: 205px;
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 45px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 760px;
+      margin-top: 40px;
+      padding-bottom: 0;
+    }
+
+    &:after{
+      @include pseudo;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -70px;
+      width: 290px;
+      height: 255px;
+      background-image: url('#{$imageDir}about-img.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @media (min-width: $screen-md) {
+        bottom: -300px;
+        width: 510px;
+        height: 475px;
+      }
+      @media (min-width: $screen-xxl) {
+        bottom: auto;
+        transition: none;
+        left: auto;
+        right: -100%;
+        top: -80px;
+        width: 480px;
+        height: 475px;
+      }
+    }
+  }
+
+  &__item {
+    @media (min-width: $screen-md) {
+      flex-basis: 48%;
+    }
+    @media (min-width: $screen-xl) {
+      flex-basis: 31%;
+    }
+
+    &:not(:first-child) {
+      margin-top: 30px;
+      @media (min-width: $screen-md) {
+        margin-top: 40px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 50px;
+      }
+    }
+
+    &:last-child {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+    &:nth-child(1) {
+      @media (min-width: $screen-md) {
+        order: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      @media (min-width: $screen-md) {
+        order: 6;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $screen-md) {
+        order: 3;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(4) {
+      @media (min-width: $screen-md) {
+        order: 5;
+      }
+    }
+
+    &:nth-child(5) {
+      @media (min-width: $screen-md) {
+        order: 2;
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(6) {
+      @media (min-width: $screen-md) {
+        order: 4;
+      }
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding-left: 55px;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-dark-grey;
+    @media (min-width: $screen-md) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: $screen-xl) {
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+  }
+
+  &__item-description {
+    margin: 0;
+    margin-top: 25px;
+  }
+
+  &__question{
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+  }
 }
