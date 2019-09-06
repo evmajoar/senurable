@@ -3,6 +3,10 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media (min-width: $screen-md) {
+    padding-right: 65px;
+  }
+
   &__item{
     font-weight: 200;
     &:not(:last-child){
@@ -23,5 +27,11 @@
 
   &__link{
     text-decoration: none;
+    transition: color .25s ease-in-out;
+
+    &:focus,
+    &:hover {
+      color: $color-pink;
+    }
   }
 }
