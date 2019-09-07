@@ -44,7 +44,7 @@
     }
 
     @media (min-width: $screen-xl) {
-      width: 1080px;
+      width: $screen-lg-small;
     }
   }
 

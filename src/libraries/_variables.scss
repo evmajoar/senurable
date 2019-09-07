@@ -35,6 +35,7 @@ $color-lighten-grey:          #999999;
 $text-color:                  $color-light-grey;
 $text-color-muted:            $gray;
 $body-bg:                     $white;
+$section-bg:                  #F9F9F9;
 
 $link-color:                  inherit;
 //$link-color--hover:           darken($color-main, 15%);
@@ -46,6 +47,8 @@ $link-color:                  inherit;
 // Базовая типографика
 
 $font-size:                   14px;
+$font-size-title-xs:          21px;
+$font-size-title-md:          42px;
 
 $font-size-h1:                40px;
 $font-size-h2:                32px;
@@ -56,7 +59,7 @@ $font-size-h6:                16px;
 
 $font-size-sm:                0.75em; // 12px от 16px
 
-$line-height:                 1.5;
+$line-height:                 18px;
 
 $typo-margin-vertical:        1em;
 
@@ -71,9 +74,10 @@ $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md-small:             576px;
 $screen-md:                   768px;
+$screen-lg-small:             970px;
 $screen-lg:                   992px;
 $screen-xl:                   1100px;
-$screen-xxl:                  1800px;
+$screen-xxl:                  1500px;
 
 $container-sm:                100%;
 $container-md-small:          480px;

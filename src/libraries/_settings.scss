@@ -7,9 +7,9 @@
 // Сделаем viewport великим снова! (привет, IE10) http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
 @at-root {
 
-  @-ms-viewport {
-    width: device-width;
-  }
+  //@-ms-viewport {
+  //  width: device-width;
+  //}
 }
 
 
@@ -243,11 +243,13 @@ hr {
   box-sizing: content-box; // Проблема Firefox
   height: 0;               // Проблема Firefox
   overflow: visible;       // Проблема Edge и IE
-  margin-top: $typo-margin-vertical * 2;
-  margin-bottom: $typo-margin-vertical * 2;
-  border: 0;
-  //border-top: 1px solid $border-color;
-  border-top: 1px solid;
+  border: none;
+  margin: 0.7em;
+  //margin-top: $typo-margin-vertical * 2;
+  //margin-bottom: $typo-margin-vertical * 2;
+  //border: 0;
+  ////border-top: 1px solid $border-color;
+  //border-top: 1px solid;
 }
 
 h1,

@@ -23,7 +23,7 @@ mixin page-header(mods)
       .page-header__top
         +logo('#', 'white')
           img(class='page-header__img', src='images/logo.svg', alt='Логотип Senurable')
-        +button('Калькулятор стоимости', 'pink, calculator, bold, text-small, uppercase')(class='page-header__button', type='button')
+        +button('Рассчитать стоимость', 'pink, text-small, uppercase')(class='page-header__button', type='button')
         +burger()(class='page-header__burger')
       +breadcrumbs()(class='page-header__breadcrumbs')
         +breadcrumbs-item(1, 'Главная', '/home')
@@ -36,7 +36,7 @@ mixin page-header(mods)
             | для бизнеса
           p.page-header__description Мы разрабатываем красивые качественные сайты, с использованием современных технологий.
           p.page-header__description Выведем бизнес на новый уровень.
-          +button('Запрос оценки стоимости', 'pink, shift-left, bold, line')(class='page-header__button-request', type='button')
+          +button('Запрос оценки стоимости', 'pink, line')(class='page-header__button-request', type='button')
         +social().page-header__social
           +social-item('Фейсбук', '#')
             +social-icon('16', '16', '0 0 16 16', 'facebook')
