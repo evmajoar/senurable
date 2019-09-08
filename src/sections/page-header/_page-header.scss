@@ -39,12 +39,8 @@
     @include container;
     position: relative;
 
-    @media (min-width: $screen-md) {
-      width: 710px;
-    }
-
     @media (min-width: $screen-xl) {
-      width: $screen-lg-small;
+      padding: 0 105px;
     }
   }
 
