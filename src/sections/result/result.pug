@@ -27,7 +27,6 @@ mixin result(title, description, mods)
     .result__inner
       +title(title, 'white, center').result__title
       p.result__description!= description
-      p.result__background
       ul.result__list
         each resultItem in resultList
           +result-item(resultItem)
