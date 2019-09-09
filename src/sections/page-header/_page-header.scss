@@ -38,10 +38,6 @@
   &__inner {
     @include container;
     position: relative;
-
-    @media (min-width: $screen-xl) {
-      padding: 0 105px;
-    }
   }
 
   &__top {
