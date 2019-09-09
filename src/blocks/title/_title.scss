@@ -36,6 +36,14 @@
         top: -12px;
         left: -5px;
       }
+
+      @media (min-width: $screen-xl) {
+        top: -10px;
+        left: -20px;
+        transform: skewY(-45deg);
+        width: 60px;
+        border-bottom: 1px solid $color-lightest-grey;
+      }
     }
   }
 
