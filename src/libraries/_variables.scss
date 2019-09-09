@@ -75,14 +75,13 @@ $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md-small:             576px;
 $screen-md:                   768px;
-$screen-lg-small:             970px;
 $screen-lg:                   992px;
 $screen-xl: 1200px;
 $screen-xxl: 1800px;
 
 $container-sm:                100%;
 $container-md-small:          480px;
-$container-md:                640px;
+$container-md: 660px;
 $container-lg: $screen-lg;
 $container-xl: $screen-xl;
 $container-xxl: $screen-xxl;
@@ -119,3 +118,4 @@ $z-index-modal:               100;
 $imageDir:                    '../images/';
 $fontDir:                     '../fonts/';
 $videoDir:                    '../videos/';
+
