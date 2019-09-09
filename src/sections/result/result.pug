@@ -1,0 +1,42 @@
+//- Все примеси в этом файле должны начинаться c имени блока (result)
+//- ВАЖНО! Файл содержит 2 миксина
+
+mixin result(title, description, mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +result('Что получите')
+          p Инфо
+
+  //- подключаем файл со структурой данных блока
+  include result.data.pug
+
+  -
+  // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+    allMods = allMods + 'result-us--' + modsList[i].trim();
+    }
+    }
+
+  section.result(class=allMods)&attributes(attributes)
+    .result__inner
+      +title(title, 'white, center').result__title
+      p.result__description!= description
+      p.result__background
+      ul.result__list
+        each resultItem in resultList
+          +result-item(resultItem)
+
+
+mixin result-item(item)
+
+  li.result__item
+    strong.result__item-title
+      != item.title
+    p.result__item-description!= item.text
+    p.result__item-description!= item.textMore
