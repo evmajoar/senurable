@@ -10,9 +10,10 @@ include ../../sections/page-header/page-header.pug
 include ../../sections/page-footer/page-footer.pug
 include ../../sections/about-us/about-us.pug
 include ../../sections/result/result.pug
+include ../../sections/services/services.pug
 
 block meta
-  title Главная страница
+  title Senurable | Разработка сайтов
   meta(name='description', content='')
 
 block header
@@ -21,4 +22,5 @@ block header
 block content
   +about-us('Почему клиенты обращаются к нам', 'Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.')
   +result('Что в итоге Вы получите', 'Всё включено! Вы получите сайт, достойный самых высоких позиций. А как Вы воспользуетесь данным инструментом, зависит только от Вас :)')
+  +services()
 block footer
