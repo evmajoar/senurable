@@ -19,7 +19,7 @@ mixin result(title, description, mods)
     if(typeof(mods) !== 'undefined' && mods) {
     var modsList = mods.split(',');
     for (var i = 0; i < modsList.length; i++) {
-    allMods = allMods + 'result-us--' + modsList[i].trim();
+    allMods = allMods + 'result--' + modsList[i].trim();
     }
     }
 
