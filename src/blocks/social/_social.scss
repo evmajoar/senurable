@@ -1,5 +1,7 @@
 .social{
   @include ul-reset;
+  display: flex;
+  flex-direction: column;
   width: 45px;
   &__item{
     height: 40px;
