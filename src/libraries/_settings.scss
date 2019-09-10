@@ -244,12 +244,11 @@ hr {
   height: 0;               // Проблема Firefox
   overflow: visible;       // Проблема Edge и IE
   border: none;
-  margin: .5em;
-  //margin-top: $typo-margin-vertical * 2;
-  //margin-bottom: $typo-margin-vertical * 2;
-  //border: 0;
-  ////border-top: 1px solid $border-color;
-  //border-top: 1px solid;
+  margin-top: $typo-margin-vertical * 2;
+  margin-bottom: $typo-margin-vertical * 2;
+  border: 0;
+  //border-top: 1px solid $border-color;
+  border-top: 1px solid;
 }
 
 h1,
@@ -284,15 +283,6 @@ address,
 figure {
   margin-top: 0;
   margin-bottom: $typo-margin-vertical;
-}
-
-p {
-  // http://clagnut.com/blog/2395
-  hyphens: auto;
-  hyphenate-limit-chars: 6 3 3;
-  hyphenate-limit-lines: 2;
-  hyphenate-limit-last: always;
-  hyphenate-limit-zone: 8%;
 }
 
 address {
