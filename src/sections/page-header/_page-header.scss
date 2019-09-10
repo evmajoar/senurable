@@ -70,14 +70,14 @@
     display: none;
 
     @media (min-width: $screen-md) {
-      display: block;
-      margin-right: -15px;
+      display: flex;
       margin-top: -100px;
+      margin-left: 15px;
     }
 
     @media (min-width: $screen-xl) {
-      margin-right: 0;
       margin-top: 20px;
+      margin-left: 0;
     }
 
   }
@@ -91,10 +91,11 @@
 
 
   &__content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto;
     margin-top: 55px;
     @media (min-width: $screen-md) {
+      grid-template-columns: auto 45px;
       margin-top: 70px;
     }
     @media (min-width: $screen-xl) {
