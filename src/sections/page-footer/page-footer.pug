@@ -19,4 +19,46 @@ mixin page-footer(mods)
 
   footer.page-footer(class=allMods)&attributes(attributes)
     .page-footer__inner
-      block
+      h2.page-footer__title Полезная информация
+      ul.page-footer__list
+        li.page-footer__item
+          h3.page-footer__title-item Контакты
+          +contacts().page-footer__section
+          +button('Заказать звонок', 'pink, uppercase, icon').page-footer__button
+        li.page-footer__item
+          h3.page-footer__title-item Услуги
+          +link()
+            +link-item('Разработка сайтов для бизнеса', '#')
+            +link-item('Уникальный фирменный стиль', '#')
+            +link-item('Продвижение сайтов', '#')
+            +link-item('Написание текстов и переводы', '#')
+            +link-item('Маркетинговые исследования', '#')
+            +link-item('Аутсорсинг продаж', '#')
+          li.page-footer__item
+            h3.page-footer__title-item Мы в соц.сетях
+            +social()
+              +social-item('Фейсбук', '#', 'background')
+                +social-icon('16', '16', '0 0 16 16', 'facebook')
+              +social-item('Вконтакте', '#', 'background')
+                +social-icon('16', '9', '0 0 30 20', 'vk')
+              +social-item('Linkedin', '#', 'background')
+                +social-icon('13', '13', '0 0 20 20', 'in')
+              +social-item('Behance', '#', 'background')
+                +social-icon('18', '15', '0 0 27 18', 'be')
+              +social-item('Behance', '#', 'background')
+                +social-icon('18', '15', '0 0 27 18', 'be')
+              +social-item('Behance', '#', 'background')
+                +social-icon('18', '15', '0 0 27 18', 'be')
+          li.page-footer__item
+            h3.page-footer__title-item Полезные ссылки
+            +link()
+              +link-item('Бриф на разработку сайта', '#')
+              +link-item('Бриф на разработку фирменного стиля', '#')
+              +link-item('База знаний', '#')
+              +link-item('О нас', '#')
+      +copyright()
+
+
+
+
+
