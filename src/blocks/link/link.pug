@@ -1,0 +1,45 @@
+//- Все примеси в этом файле должны начинаться c имени блока (link)
+//- ВАЖНО! Файл содержит 2 миксина
+
+mixin link(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +link()
+          +link-item('Главная', '/home')
+          +link-item('Услуги', '/services')
+  -
+  // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+    allMods = allMods + ' link--' + modsList[i].trim();
+    }
+    }
+
+  ul.link(class=allMods)&attributes(attributes)
+    block
+
+
+mixin link-item(text, href, mods)
+
+  //- Принимает:
+  //-   text   {string} - содержимое пункта
+  //-   href   {string} - ссылка этого пункта (если пустая, то это не ссылка, а span)
+  //-   mods   {string} - список модификаторов
+
+  -
+  // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+    allMods = allMods + ' breadcrumbs__item--' + modsList[i].trim();
+    }
+    }
+
+  li.link__item(class=allMods)&attributes(attributes)
+    a.link__link(href=href)!= text
