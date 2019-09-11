@@ -1,0 +1,14 @@
+.link {
+  @include ul-reset;
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}

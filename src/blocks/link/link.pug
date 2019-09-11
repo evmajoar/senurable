@@ -11,7 +11,7 @@ mixin link(mods)
           +link-item('Главная', '/home')
           +link-item('Услуги', '/services')
   -
-  // список модификаторов
+
     var allMods = '';
     if(typeof(mods) !== 'undefined' && mods) {
     var modsList = mods.split(',');
@@ -32,14 +32,14 @@ mixin link-item(text, href, mods)
   //-   mods   {string} - список модификаторов
 
   -
-  // список модификаторов
+
     var allMods = '';
     if(typeof(mods) !== 'undefined' && mods) {
     var modsList = mods.split(',');
     for (var i = 0; i < modsList.length; i++) {
-    allMods = allMods + ' breadcrumbs__item--' + modsList[i].trim();
+    allMods = allMods + 'link__link--' + modsList[i].trim();
     }
     }
 
-  li.link__item(class=allMods)&attributes(attributes)
-    a.link__link(href=href)!= text
+  li.link__item
+    a.link__link(class=allMods, href=href)&attributes(attributes)!= text
