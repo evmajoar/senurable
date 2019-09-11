@@ -37,7 +37,8 @@
 
     &:hover {
       .tabs__icon-wrapper {
-        background-color: #333333;
+        color: $white;
+        background-color: $color-dark-grey;
 
         &:before,
         &:after {
@@ -80,18 +81,17 @@
 
     &:before {
       top: -25px;
-      border-bottom: 25px solid #333333;
+      border-bottom: 25px solid $color-dark-grey;
     }
 
     &:after {
       bottom: -25px;
-      border-top: 25px solid #333333;
+      border-top: 25px solid $color-dark-grey;
     }
   }
 
   &__icon {
     z-index: 2;
-    transition: all $transition-time;
     @media (min-width: $screen-md) {
       width: 100px;
       height: 85px;
