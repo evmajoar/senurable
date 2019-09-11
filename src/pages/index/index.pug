@@ -6,6 +6,8 @@ include ../../blocks/logo/logo.pug
 include ../../blocks/breadcrumbs/breadcrumbs.pug
 include ../../blocks/social/social.pug
 include ../../blocks/title/title.pug
+include ../../blocks/tabs/tabs.pug
+include ../../blocks/service-info/service-info.pug
 include ../../sections/page-header/page-header.pug
 include ../../sections/page-footer/page-footer.pug
 include ../../sections/about-us/about-us.pug
@@ -20,7 +22,7 @@ block header
   +page-header()
 
 block content
+  +services('Что мы предлагаем')
   +about-us('Почему клиенты обращаются к нам', 'Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.')
   +result('Что в итоге Вы получите', 'Всё включено! Вы получите сайт, достойный самых высоких позиций. А как Вы воспользуетесь данным инструментом, зависит только от Вас :)')
-  +services()
 block footer
