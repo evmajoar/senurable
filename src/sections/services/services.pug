@@ -1,0 +1,61 @@
+//- Все примеси в этом файле должны начинаться c имени блока (services)
+
+mixin services(title, mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +services()
+          p «Шапка»
+  -
+  // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+    allMods = allMods + 'services--' + modsList[i].trim();
+    }
+    }
+
+  section.services(class=allMods)&attributes(attributes)
+    .services__inner
+      +title(title, 'grey, center').services__title
+      p.services__choice Выберите масштаб Вашего проекта
+      +tabs([
+          {
+              'id': 'tab00',
+              'text': 'Лендинг',
+              'mods': 'tabs__link-wrap--big-icons',
+              'isActive': true,
+              'iconId': 'rocket',
+              'width': '50',
+              'height': '55',
+          },
+          {
+              'id': 'tab01',
+              'text': 'Корпоративный сайт',
+              'mods': 'tabs__link-wrap--big-icons',
+              'iconId': 'astronaut',
+              'width': '75',
+              'height': '55',
+          },
+          {
+              'id': 'tab02',
+              'text': 'Интернет-магазин',
+              'mods': 'tabs__link-wrap--big-icons',
+              'iconId': 'satellite',
+              'width': '60',
+              'height': '55',
+          },
+      ]).services__tabs
+        +tabs-item('tab00', true).services__tabs-item
+          h3.services__item-title Разработка лендинга
+          p.services__item-description Лендинг в правильных руках - это мощный инструмент для привлечения клиентов.
+          p.services__item-description Благодаря удачному расположению CTA-кнопок и лид-форм лендинг более эффективно воздействует на пользователя.
+          p.services__item-description Лендинги создают под конкретный товар или услугу, они более эффективны для быстрых продаж и сбора лидов.
+          +service-info().services__info
+          p.services__buttons
+            +button('Подробнее о лендинге', 'pink, full').services__btn-details
+            +button('Рассчитать стоимость лендинга', 'transparent, icon, triangle').services__btn-calculate
+
