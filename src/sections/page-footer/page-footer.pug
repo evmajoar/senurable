@@ -24,10 +24,10 @@ mixin page-footer(mods)
         li.page-footer__item
           h3.page-footer__title-item Контакты
           +contacts().page-footer__section
-          +button('Заказать звонок', 'pink, uppercase, icon').page-footer__button
+          +button('Заказать звонок', 'pink, uppercase, icon, phone, vertical-line').page-footer__button
         li.page-footer__item
           h3.page-footer__title-item Услуги
-          +link()
+          +link().page-footer__section
             +link-item('Разработка сайтов для бизнеса', '#')
             +link-item('Уникальный фирменный стиль', '#')
             +link-item('Продвижение сайтов', '#')
@@ -36,27 +36,27 @@ mixin page-footer(mods)
             +link-item('Аутсорсинг продаж', '#')
         li.page-footer__item
           h3.page-footer__title-item Мы в соц.сетях
-          +social()
+          +social('row').page-footer__section
             +social-item('Фейсбук', '#', 'background')
-              +social-icon('16', '16', '0 0 16 16', 'facebook')
+              +social-icon('16', '18', '0 0 14 16', 'facebook')
             +social-item('Вконтакте', '#', 'background')
-              +social-icon('16', '9', '0 0 30 20', 'vk')
+              +social-icon('27', '15', '0 0 30 15', 'vk')
             +social-item('Linkedin', '#', 'background')
-              +social-icon('13', '13', '0 0 20 20', 'in')
+              +social-icon('25', '20', '0 0 20 17', 'in')
+            +social-item('Twitter', '#', 'background')
+              +social-icon('20', '20', '0 0 20 18', 'tw')
             +social-item('Behance', '#', 'background')
-              +social-icon('18', '15', '0 0 27 18', 'be')
-            +social-item('Behance', '#', 'background')
-              +social-icon('18', '15', '0 0 27 18', 'be')
-            +social-item('Behance', '#', 'background')
-              +social-icon('18', '15', '0 0 27 18', 'be')
+              +social-icon('22', '14', '0 0 27 16', 'be')
+            +social-item('Instagram', '#', 'background')
+              +social-icon('22', '14', '0 0 27 16', 'be')
         li.page-footer__item
           h3.page-footer__title-item Полезные ссылки
-          +link()
+          +link().page-footer__section
             +link-item('Бриф на разработку сайта', '#')
             +link-item('Бриф на разработку фирменного стиля', '#')
             +link-item('База знаний', '#')
             +link-item('О нас', '#')
-      +copyright()
+    +copyright()
 
 
 
