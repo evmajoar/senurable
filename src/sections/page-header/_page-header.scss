@@ -45,11 +45,6 @@
     align-items: center;
   }
 
-  &__img {
-    height: 100%;
-  }
-
-
   &__burger {
     margin-left: auto;
     @media (min-width: $screen-md) {
