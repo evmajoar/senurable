@@ -11,13 +11,13 @@ mixin contacts(mods)
   include contacts.data.pug
 
   -
-  // список модификаторов
+    // список модификаторов
     var allMods = '';
     if(typeof(mods) !== 'undefined' && mods) {
-    var modsList = mods.split(',');
-    for (var i = 0; i < modsList.length; i++) {
-    allMods = allMods + 'contacts--' + modsList[i].trim();
-    }
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + 'contacts--' + modsList[i].trim();
+      }
     }
 
   ul.contacts(class=allMods)&attributes(attributes)
@@ -31,4 +31,4 @@ mixin contacts-item(item)
     span.contacts__wrapper-icon
       svg.contacts__icon(width=item.iconSize.width, height=item.iconSize.height)
         use(xlink:href='icons/sprite.svg#icon-' + item.iconId)
-    span.contacts__item-description!= item.text
+    a.contacts__item-link(href=item.href)!= item.text

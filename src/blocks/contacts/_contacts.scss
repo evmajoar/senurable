@@ -16,4 +16,12 @@
     min-width: 35px;
     margin-right: 15px;
   }
+
+  &__item-link{
+    text-decoration: none;
+    &:focus,
+    &:hover {
+      color: $color-pink;
+    }
+  }
 }
