@@ -8,19 +8,20 @@ mixin copyright(mods)
   //- Вызов:
         +copyright()
   -
-  // список модификаторов
+    // список модификаторов
     var allMods = '';
     if(typeof(mods) !== 'undefined' && mods) {
-    var modsList = mods.split(',');
-    for (var i = 0; i < modsList.length; i++) {
-    allMods = allMods + 'copyright--' + modsList[i].trim();
-    }
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + 'copyright--' + modsList[i].trim();
+      }
     }
 
   section.copyright(class=allMods)&attributes(attributes)
-    +logo('/', 'black')
-      img(class='copyright__img', src='images/logo-black.svg', alt='Логотип Senurable')
-    p.copyright__info
-      | Copyright 2019 (с)
-      b.copyright__company Senurable Web Factory. Все права защищены
-    a.copyright__link(href='#') Политика конфиденциальности
+    .copyright__inner
+      +logo('#', 'black')
+        img(class='copyright__img', src='images/logo-black.svg', alt='Логотип Senurable')
+      p.copyright__info
+        | Copyright 2019 (с)
+        b.copyright__company Senurable Web Factory. Все права защищены
+      a.copyright__link(href='#') Политика конфиденциальности
