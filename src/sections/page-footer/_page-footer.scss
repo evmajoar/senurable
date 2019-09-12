@@ -10,7 +10,7 @@
     padding-top: 65px;
   }
 
-  &__inner {
+  &__content{
     @include container;
     padding-bottom: 55px;
     @media (min-width: $screen-xl) {
