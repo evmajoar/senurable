@@ -1,0 +1,58 @@
+.feedback{
+  padding: 45px 0 55px;
+  font-weight: 300;
+  color: $white;
+  background-color: rgba(51, 51, 51, 0.8);
+  background-image: url('#{$imageDir}bg-feedback.jpg');
+  background-color: #535059;
+  background-repeat: no-repeat;
+  background-position: center left -405px;
+  background-size: auto 100%;
+  @media (min-width: $screen-md) {
+    padding: 70px 0 80px;
+    background-position: center left;
+  }
+
+  &__inner{
+    @include container;
+  }
+
+  &__content{
+    max-width: 565px;
+    @media (min-width: $screen-md) {
+      margin: 0 auto;
+    }
+  }
+
+  &__description{
+    margin: 0;
+    margin-top: 20px;
+    @media (min-width: $screen-md) {
+      margin-top: 50px;
+    }
+  }
+
+  &__form{
+    margin-top: 50px;
+    @media (min-width: $screen-md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__label{
+    &:not(:first-child){
+      margin-top: 25px;
+    }
+  }
+
+  &__button-attach{
+    margin-top: 30px;
+    @media (min-width: $screen-md) {
+      margin-top: 20px;
+    }
+  }
+
+  &__button{
+    margin-top: 25px;
+  }
+}
