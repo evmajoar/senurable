@@ -5,7 +5,7 @@
   width: 45px;
   color: $white;
 
-  &--row{
+  &--row {
     flex-direction: row;
     width: 100%;
   }
@@ -39,15 +39,19 @@
 
     &--background {
       height: auto;
-      &:not(:first-child){
+
+      &:not(:first-child) {
         margin-left: 20px;
       }
-      &:hover {
+
+      &:hover,
+      &:focus {
         .social__icon {
           fill: $color-pink;
         }
       }
-      .social__link{
+
+      .social__link {
         align-items: flex-end;
       }
     }

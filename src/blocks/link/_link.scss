@@ -4,7 +4,8 @@
   color: inherit;
 
 
-  &:not(.link--no-hover):hover {
+  &:not(.link--no-hover):hover,
+  &:not(.link--no-hover):focus{
     color: $color-pink;
   }
 
