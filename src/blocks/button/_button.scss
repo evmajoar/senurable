@@ -152,12 +152,21 @@
   }
 
 
+  // размеры
   &--full {
     width: 100%;
     @media (min-width: $screen-sm) {
       width: auto;
     }
   }
+
+  &--xxl{
+    @media (min-width: $screen-sm) {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+  }
+
 
   // текст
   &--text-small {
