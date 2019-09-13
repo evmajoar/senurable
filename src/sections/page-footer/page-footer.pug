@@ -28,13 +28,19 @@ mixin page-footer(mods)
             +button('Заказать звонок', 'pink, uppercase, icon, phone, vertical-line').page-footer__button
           li.page-footer__item
             h3.page-footer__title-item Услуги
-            +link().page-footer__section
-              +link-item('Разработка сайтов для бизнеса', '#')
-              +link-item('Уникальный фирменный стиль', '#')
-              +link-item('Продвижение сайтов', '#')
-              +link-item('Написание текстов и переводы', '#')
-              +link-item('Маркетинговые исследования', '#')
-              +link-item('Аутсорсинг продаж', '#')
+            +list().page-footer__section
+              +list-item().page-footer__section-item
+                +link('Разработка сайтов для бизнеса', '#')
+              +list-item().page-footer__section-item
+                +link('Уникальный фирменный стиль', '#')
+              +list-item().page-footer__section-item
+                +link('Продвижение сайтов', '#')
+              +list-item().page-footer__section-item
+                +link('Написание текстов и переводы', '#')
+              +list-item().page-footer__section-item
+                +link('Маркетинговые исследовани', '#')
+              +list-item().page-footer__section-item
+                +link('Аутсорсинг продаж', '#')
           li.page-footer__item
             h3.page-footer__title-item Мы в соц.сетях
             +social('row').page-footer__section
@@ -52,11 +58,15 @@ mixin page-footer(mods)
                 +social-icon('22', '14', '0 0 27 16', 'be')
           li.page-footer__item
             h3.page-footer__title-item Полезные ссылки
-            +link().page-footer__section
-              +link-item('Бриф на разработку сайта', '#')
-              +link-item('Бриф на разработку фирменного стиля', '#')
-              +link-item('База знаний', '#')
-              +link-item('О нас', '#')
+            +list().page-footer__section
+              +list-item().page-footer__section-item
+                +link('Бриф на разработку сайта', '#')
+              +list-item().page-footer__section-item
+                +link('Бриф на разработку фирменного стиля', '#')
+              +list-item().page-footer__section-item
+                +link('База знаний', '#')
+              +list-item().page-footer__section-item
+                +link('О нас', '#')
       +copyright()
 
 

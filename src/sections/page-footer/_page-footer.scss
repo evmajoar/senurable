@@ -10,7 +10,7 @@
     padding-top: 65px;
   }
 
-  &__content{
+  &__content {
     @include container;
     padding-bottom: 55px;
     @media (min-width: $screen-xl) {
@@ -37,11 +37,13 @@
     position: relative;
     z-index: 1;
     color: $white;
+
     &:first-child {
-      .page-footer__title-item{
+      .page-footer__title-item {
         border-bottom: 2px solid $color-pink;
       }
     }
+
     &:after {
       @include pseudo;
       top: 50px;
@@ -84,7 +86,7 @@
       }
     }
 
-    &:nth-child(4){
+    &:nth-child(4) {
       @media (min-width: $screen-xl) {
         padding-right: 25px;
       }
@@ -99,6 +101,12 @@
       @media (min-width: $screen-xl) {
         padding-left: 0;
       }
+    }
+  }
+
+  &__section-item {
+    &:not(:first-child) {
+      margin-top: 20px;
     }
   }
 
