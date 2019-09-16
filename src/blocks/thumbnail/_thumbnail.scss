@@ -40,5 +40,8 @@
     color: $color-lighten-grey;
     border: none;
     background-color: transparent;
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
   }
 }
