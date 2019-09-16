@@ -11,10 +11,13 @@
   appearance: textfield;
   border: 1px solid $white;
   background-color: transparent;
+  transition: all $transition-time;
 
-  //&:focus {
-  //  @include field-focus;
-  //}
+  &:focus {
+    //@include field-focus;
+    outline: 0;
+    border: 1px solid $color-pink;
+  }
 
   //&[disabled],
   //&[readonly] {
@@ -52,11 +55,12 @@
   }
 }
 
-
-@mixin field-focus {
-  outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
-}
+//
+//@mixin field-focus {
+//  outline: 0;
+//  border: 1px solid $color-pink;
+//
+//}
 
 
 @mixin field-name {

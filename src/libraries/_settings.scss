@@ -162,6 +162,10 @@ textarea {
   margin: 0;                  // Убираем margin в Firefox и Safari
 }
 
+button{
+  cursor: pointer;
+}
+
 button,
 input {
   overflow: visible;    // Покажем торчащее в Edge
