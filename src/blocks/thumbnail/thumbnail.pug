@@ -1,0 +1,41 @@
+//- Все примеси в этом файле должны начинаться c имени блока (thumbnail)
+//- ВАЖНО! Файл содержит 2 миксина
+mixin thumbnail(text, mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +thumbnail('О нас')
+          +thumbnail-item('Текст')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' thumbnail--' + modsList[i].trim();
+      }
+    }
+
+
+  ul.thumbnail(class=allMods)&attributes(attributes)
+    block
+
+
+
+mixin thumbnail-item(text, mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' thumbnail__item--' + modsList[i].trim();
+      }
+    }
+
+  li.thumbnail__item(class=allMods)&attributes(attributes)
+    button.thumbnail__button!= text
+      block
