@@ -1,0 +1,35 @@
+.buttons-carousel{
+  display: none;
+  margin: 0;
+  @media (min-width: $screen-xl) {
+    display: block;
+  }
+
+  &__button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 70px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    &--prev{
+      left: -50px;
+      background-image: url('#{$imageDir}arrow-carousel.svg');
+    }
+    &--next{
+      right: -50px;
+      transform: translateY(-50%) rotate(180deg);
+      background-image: url('#{$imageDir}arrow-carousel.svg');
+    }
+  }
+
+  &__name{
+    @include hide-text;
+  }
+}
