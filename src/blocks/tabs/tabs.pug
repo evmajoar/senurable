@@ -25,13 +25,13 @@ mixin tabs(props, mods)
           +tabs-item('tab01')
             p За словесными горами в стране, гласных и согласных живут рыбные тексты.1
   -
-  // список модификаторов
+    // список модификаторов
     var allMods = '';
     if(typeof(mods) !== 'undefined' && mods) {
-    var modsList = mods.split(',');
-    for (var i = 0; i < modsList.length; i++) {
-    allMods = allMods + ' tabs--' + modsList[i].trim();
-    }
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' tabs--' + modsList[i].trim();
+      }
     }
 
 
