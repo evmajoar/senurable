@@ -19,11 +19,11 @@
     background-size: cover;
     cursor: pointer;
     &--prev{
-      left: -50px;
+      left: -65px;
       background-image: url('#{$imageDir}arrow-carousel.svg');
     }
     &--next{
-      right: -50px;
+      right: -65px;
       transform: translateY(-50%) rotate(180deg);
       background-image: url('#{$imageDir}arrow-carousel.svg');
     }
