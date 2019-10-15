@@ -26,20 +26,21 @@ mixin portfolio(title, description, mods)
         +thumbnail-item('Лендинги')
         +thumbnail-item('Корпоративные сайты', 'active')
         +thumbnail-item('Интернет-магазины')
-      ul.portfolio__carousel-list
-        li.portfolio__carousel-item.portfolio__carousel-item--1
-          time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
-          h3.portfolio__item-title Translife
-          p.portfolio__item-description Транспортная компания
-          +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
-        li.portfolio__carousel-item.portfolio__carousel-item--1.portfolio__carousel-item--center
-          time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
-          h3.portfolio__item-title Translife
-          p.portfolio__item-description Транспортная компания
-          +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
-        li.portfolio__carousel-item.portfolio__carousel-item--1
-          time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
-          h3.portfolio__item-title Translife
-          p.portfolio__item-description Транспортная компания
-          +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
+      .portfolio__wrapper-carousel
+        ul.portfolio__carousel-list
+          li.portfolio__carousel-item.portfolio__carousel-item--1
+            time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
+            h3.portfolio__item-title Translife
+            p.portfolio__item-description Транспортная компания
+            +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
+          li.portfolio__carousel-item.portfolio__carousel-item--1.portfolio__carousel-item--center
+            time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
+            h3.portfolio__item-title Translife
+            p.portfolio__item-description Транспортная компания
+            +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
+          li.portfolio__carousel-item.portfolio__carousel-item--1
+            time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
+            h3.portfolio__item-title Translife
+            p.portfolio__item-description Транспортная компания
+            +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
         +buttons-carousel()

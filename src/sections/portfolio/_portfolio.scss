@@ -32,6 +32,10 @@
       margin-top: 55px;
     }
   }
+  
+  &__wrapper-carousel{
+    position: relative;
+  }
 
   &__carousel-list {
     @include ul-reset;
