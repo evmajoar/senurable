@@ -1,0 +1,54 @@
+.service-info {
+  @include ul-reset;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 25px;
+  width: 100%;
+  overflow-x: scroll;
+  @media (min-width: $screen-lg) {
+    overflow-x: visible;
+  }
+  @media (min-width: $screen-xl) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 50px;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    width: 180px;
+    @media (min-width: $screen-xl) {
+      justify-content: space-between;
+    }
+  }
+
+  &__item-description {
+    margin: 0;
+    margin-left: 20px;
+    @media (min-width: $screen-xl) {
+      min-width: 95px;
+    }
+  }
+
+  &__wrapper-icon {
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+  }
+
+  &__value {
+    display: block;
+
+    b {
+      font-size: 21px;
+      font-weight: 700;
+      color: $color-dark-grey;
+    }
+  }
+}

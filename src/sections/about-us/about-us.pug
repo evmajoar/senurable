@@ -1,15 +1,12 @@
 //- Все примеси в этом файле должны начинаться c имени блока (about-us)
 //- ВАЖНО! Файл содержит 2 миксина
-
 mixin about-us(title, description, mods)
 
   //- Принимает:
   //-   mods  {string} - список модификаторов
-
   //- Вызов:
         +about-us('О нас')
           p Инфо
-
   //- подключаем файл со структурой данных блока
   include about-us.data.pug
 
@@ -19,13 +16,12 @@ mixin about-us(title, description, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + 'about-us--' + modsList[i].trim();
+      allMods = allMods + 'about-us--' + modsList[i].trim();
       }
     }
-
   section.about-us(class=allMods)&attributes(attributes)
     .about-us__inner
-      +title(title, 'grey, angle, about-us')
+      +title(title, 'grey, angle').about-us__title
       p.about-us__description!= description
       ul.about-us__list
         each aboutUsItem in aboutUsList
@@ -40,3 +36,4 @@ mixin about-us-item(item)
         use(xlink:href='icons/sprite.svg#icon-' + item.iconId)
       != item.title
     p.about-us__item-description!= item.text
+    p.about-us__item-description!= item.textMore

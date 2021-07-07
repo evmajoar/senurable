@@ -19,4 +19,57 @@ mixin page-footer(mods)
 
   footer.page-footer(class=allMods)&attributes(attributes)
     .page-footer__inner
-      block
+      section.page-footer__content
+        h2.page-footer__title Полезная информация
+        ul.page-footer__list
+          li.page-footer__item
+            h3.page-footer__title-item Контакты
+            +contacts().page-footer__section
+            +button('Заказать звонок', 'pink, uppercase, icon, phone, vertical-line').page-footer__button
+          li.page-footer__item
+            h3.page-footer__title-item Услуги
+            +list().page-footer__section
+              +list-item().page-footer__section-item
+                +link('Разработка сайтов для бизнеса', '#')
+              +list-item().page-footer__section-item
+                +link('Уникальный фирменный стиль', '#')
+              +list-item().page-footer__section-item
+                +link('Продвижение сайтов', '#')
+              +list-item().page-footer__section-item
+                +link('Написание текстов и переводы', '#')
+              +list-item().page-footer__section-item
+                +link('Маркетинговые исследовани', '#')
+              +list-item().page-footer__section-item
+                +link('Аутсорсинг продаж', '#')
+          li.page-footer__item
+            h3.page-footer__title-item Мы в соц.сетях
+            +social('row').page-footer__section
+              +social-item('Фейсбук', '#', 'background')
+                +social-icon('16', '18', '0 0 14 16', 'facebook')
+              +social-item('Вконтакте', '#', 'background')
+                +social-icon('27', '15', '0 0 30 15', 'vk')
+              +social-item('Linkedin', '#', 'background')
+                +social-icon('25', '20', '0 0 20 17', 'in')
+              +social-item('Twitter', '#', 'background')
+                +social-icon('20', '20', '0 0 20 18', 'tw')
+              +social-item('Behance', '#', 'background')
+                +social-icon('30', '16', '', 'be')
+              +social-item('Instagram', '#', 'background')
+                +social-icon('20', '20', '0 0 20 20', 'ig')
+          li.page-footer__item
+            h3.page-footer__title-item Полезные ссылки
+            +list().page-footer__section
+              +list-item().page-footer__section-item
+                +link('Бриф на разработку сайта', '#')
+              +list-item().page-footer__section-item
+                +link('Бриф на разработку фирменного стиля', '#')
+              +list-item().page-footer__section-item
+                +link('База знаний', '#')
+              +list-item().page-footer__section-item
+                +link('О нас', '#')
+      +copyright()
+
+
+
+
+

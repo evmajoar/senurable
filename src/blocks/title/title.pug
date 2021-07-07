@@ -17,5 +17,5 @@ mixin title(text, mods)
       }
     }
 
-  h2.title(class=allMods)!= text
+  h2.title(class=allMods)&attributes(attributes)!= text
     block

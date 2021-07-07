@@ -1,0 +1,107 @@
+.tabs {
+
+  &__links {
+    @include ul-reset;
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: 0 auto;
+    @media (min-width: $screen-md) {
+      max-width: 100%;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 600px;
+    }
+  }
+
+  &__link-wrap {
+    flex-basis: 95px;
+    flex-shrink: 0;
+    @media (min-width: $screen-md) {
+      flex-basis: 145px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: $color-dark-grey;
+    font-size: 12px;
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      .tabs__icon-wrapper {
+        color: $white;
+        background-color: $color-dark-grey;
+
+        &:before,
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      .tabs__icon {
+        fill: $white;
+      }
+    }
+  }
+
+  &__icon-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0 40px;
+    cursor: pointer;
+    transition: all $transition-time;
+
+    &:before,
+    &:after {
+      @include pseudo;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 48px solid transparent;
+      border-right: 47px solid transparent;
+      transition: all $transition-time;
+      opacity: 0;
+      @media (min-width: $screen-md) {
+        border-left: 72px solid transparent;
+        border-right: 72px solid transparent;
+      }
+    }
+
+    &:before {
+      top: -25px;
+      border-bottom: 25px solid $color-dark-grey;
+    }
+
+    &:after {
+      bottom: -25px;
+      border-top: 25px solid $color-dark-grey;
+    }
+  }
+
+  &__icon {
+    z-index: 2;
+    @media (min-width: $screen-md) {
+      width: 100px;
+      height: 85px;
+    }
+  }
+
+  &__content-wrapper {
+    margin-top: 25px;
+    @media (min-width: $screen-md) {
+      margin-top: 40px;
+    }
+  }
+}

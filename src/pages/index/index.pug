@@ -6,17 +6,37 @@ include ../../blocks/logo/logo.pug
 include ../../blocks/breadcrumbs/breadcrumbs.pug
 include ../../blocks/social/social.pug
 include ../../blocks/title/title.pug
+include ../../blocks/tabs/tabs.pug
+include ../../blocks/service-info/service-info.pug
+include ../../blocks/form/form.pug
+include ../../blocks/field-text/field-text.pug
+include ../../blocks/contacts/contacts.pug
+include ../../blocks/link/link.pug
+include ../../blocks/copyright/copyright.pug
+include ../../blocks/input/input.pug
+include ../../blocks/list/list.pug
+include ../../blocks/thumbnail/thumbnail.pug
+include ../../blocks/buttons-carousel/buttons-carousel.pug
 include ../../sections/page-header/page-header.pug
 include ../../sections/page-footer/page-footer.pug
 include ../../sections/about-us/about-us.pug
+include ../../sections/result/result.pug
+include ../../sections/services/services.pug
+include ../../sections/feedback/feedback.pug
+include ../../sections/portfolio/portfolio.pug
 
 block meta
-  title Главная страница
+  title Senurable | Разработка сайтов
   meta(name='description', content='')
 
 block header
   +page-header()
 
 block content
+  +services('Что мы предлагаем')
   +about-us('Почему клиенты обращаются к нам', 'Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.')
+  +result('Что в итоге Вы получите', 'Всё включено! Вы получите сайт, достойный самых высоких позиций. А как Вы воспользуетесь данным инструментом, зависит только от Вас :)')
+  +portfolio('Наше портфолио', 'Мы выполнили более 55 проектов по разработке сайтов. ')
+  +feedback('Есть идея?', 'Поделитесь своими идеями, пожеланиями, и мы пришлем детальную оценку по времени и стоимости индивидуально для Вашего проекта в течение 24 часов.')
 block footer
+  +page-footer()

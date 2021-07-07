@@ -25,8 +25,10 @@ $color-gh:                    #24292e;
 $color-pink:                  #E84A61;
 $color-dark-grey:             #333333;
 $color-darken-grey:           #444444;
+$color-darker-grey:           #555555;
 $color-light-grey:            #777777;
 $color-lighten-grey:          #999999;
+$color-lightest-grey:         #E0E0E0;
 
 
 
@@ -35,7 +37,7 @@ $color-lighten-grey:          #999999;
 $text-color:                  $color-light-grey;
 $text-color-muted:            $gray;
 $body-bg:                     $white;
-$section-bg:                  #F9F9F9;
+$section-bg:                  #f9f9f9;
 
 $link-color:                  inherit;
 //$link-color--hover:           darken($color-main, 15%);
@@ -59,7 +61,7 @@ $font-size-h6:                16px;
 
 $font-size-sm:                0.75em; // 12px от 16px
 
-$line-height:                 18px;
+$line-height:                 1.5;
 
 $typo-margin-vertical:        1em;
 
@@ -74,17 +76,18 @@ $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md-small:             576px;
 $screen-md:                   768px;
-$screen-lg-small:             970px;
 $screen-lg:                   992px;
-$screen-xl:                   1100px;
-$screen-xxl:                  1500px;
+$screen-xl:                   1200px;
+$screen-xll:                  1400px;
+$screen-xxl:                  1800px;
 
 $container-sm:                100%;
 $container-md-small:          480px;
-$container-md:                640px;
-$container-lg:                $screen-lg - 30;
-$container-xl:                $screen-xl - 30;
-$container-xxl:               $screen-xxl - 30;
+$container-md:                660px;
+$container-lg:                $screen-lg;
+$container-xl:                $screen-xl;
+$container-xll:               $screen-xll;
+$container-xxl:               $screen-xxl;
 
 
 
@@ -97,8 +100,8 @@ $grid-gutter-width:           30px;
 
 // Разное
 
-$field-padding-vertical:      10px;
-$field-padding-horizontal:    30px;
+$field-padding-vertical:      15px;
+$field-padding-horizontal:    15px;
 
 $border-radius:               3px;
 $opacity:                     0.7;
@@ -118,3 +121,4 @@ $z-index-modal:               100;
 $imageDir:                    '../images/';
 $fontDir:                     '../fonts/';
 $videoDir:                    '../videos/';
+

@@ -1,0 +1,46 @@
+//- Все примеси в этом файле должны начинаться c имени блока (portfolio)
+mixin portfolio(title, description, mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +portfolio('О нас')
+          p Инфо
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' portfolio--' + modsList[i].trim();
+      }
+    }
+  section.portfolio(class=allMods)&attributes(attributes)
+    .portfolio__inner
+      +title(title, 'grey, center')
+      p.portfolio__description!= description
+      //.portfolio__carousel
+      +thumbnail().portfolio__thumbnail
+        +thumbnail-item('Все')
+        +thumbnail-item('Лендинги')
+        +thumbnail-item('Корпоративные сайты', 'active')
+        +thumbnail-item('Интернет-магазины')
+      .portfolio__wrapper-carousel
+        ul.portfolio__carousel-list
+          li.portfolio__carousel-item.portfolio__carousel-item--1
+            time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
+            h3.portfolio__item-title Translife
+            p.portfolio__item-description Транспортная компания
+            +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
+          li.portfolio__carousel-item.portfolio__carousel-item--1.portfolio__carousel-item--center
+            time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
+            h3.portfolio__item-title Translife
+            p.portfolio__item-description Транспортная компания
+            +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
+          li.portfolio__carousel-item.portfolio__carousel-item--1
+            time(datetime='2019-02').portfolio__item-date Февраль #[br] 2019
+            h3.portfolio__item-title Translife
+            p.portfolio__item-description Транспортная компания
+            +button('Смотреть подробнее', 'pink, xs').portfolio__item-button
+        +buttons-carousel()

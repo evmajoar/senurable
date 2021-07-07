@@ -38,25 +38,12 @@
   &__inner {
     @include container;
     position: relative;
-
-    @media (min-width: $screen-md) {
-      width: 710px;
-    }
-
-    @media (min-width: $screen-xl) {
-      width: $screen-lg-small;
-    }
   }
 
   &__top {
     display: flex;
     align-items: center;
   }
-
-  &__img {
-    height: 100%;
-  }
-
 
   &__burger {
     margin-left: auto;
@@ -78,14 +65,14 @@
     display: none;
 
     @media (min-width: $screen-md) {
-      display: block;
-      margin-right: -15px;
+      display: flex;
       margin-top: -100px;
+      margin-left: 15px;
     }
 
     @media (min-width: $screen-xl) {
-      margin-right: 0;
       margin-top: 20px;
+      margin-left: 0;
     }
 
   }
@@ -99,10 +86,11 @@
 
 
   &__content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto;
     margin-top: 55px;
     @media (min-width: $screen-md) {
+      grid-template-columns: auto 45px;
       margin-top: 70px;
     }
     @media (min-width: $screen-xl) {

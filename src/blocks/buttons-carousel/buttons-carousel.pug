@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (buttons-carousel)
+mixin buttons-carousel(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +buttons-carousel('')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' buttons-carousel--' + modsList[i].trim();
+      }
+   }
+
+
+  p.buttons-carousel(class=allMods)&attributes(attributes)
+    button.buttons-carousel__button.buttons-carousel__button--prev
+      span.buttons-carousel__name Назад
+    button.buttons-carousel__button.buttons-carousel__button--next
+      span.buttons-carousel__name Вперед

@@ -1,0 +1,34 @@
+//- Все примеси в этом файле должны начинаться c имени блока (contacts)
+//- ВАЖНО! Файл содержит 2 миксина
+mixin contacts(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +contacts()
+
+  //- подключаем файл со структурой данных блока
+  include contacts.data.pug
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + 'contacts--' + modsList[i].trim();
+      }
+    }
+
+  ul.contacts(class=allMods)&attributes(attributes)
+    each contactsItem in contactsList
+      +contacts-item(contactsItem)
+
+
+mixin contacts-item(item)
+
+  li.contacts__item
+    span.contacts__wrapper-icon
+      svg.contacts__icon(width=item.iconSize.width, height=item.iconSize.height)
+        use(xlink:href='icons/sprite.svg#icon-' + item.iconId)
+    a.contacts__item-link(href=item.href)!= item.text

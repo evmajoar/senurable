@@ -2,4 +2,127 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.page-footer {}
+.page-footer {
+  padding-top: 55px;
+  line-height: 16px;
+  background-color: $color-dark-grey;
+  @media (min-width: $screen-md) {
+    padding-top: 65px;
+  }
+
+  &__content {
+    @include container;
+    padding-bottom: 55px;
+    @media (min-width: $screen-xl) {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__title {
+    @include hide-text;
+  }
+
+  &__list {
+    @include ul-reset;
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $screen-xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    color: $white;
+
+    &:first-child {
+      .page-footer__title-item {
+        border-bottom: 2px solid $color-pink;
+      }
+    }
+
+    &:after {
+      @include pseudo;
+      top: 50px;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 1px;
+      background-color: $color-darker-grey;
+    }
+
+    &:not(:first-child) {
+      margin-top: 35px;
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+    }
+
+    &:last-child {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: $screen-md) {
+        grid-row-start: 1;
+        grid-column-start: 2;
+        margin-top: 0;
+      }
+      @media (min-width: $screen-xl) {
+        grid-column-start: 4;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      @media (min-width: $screen-md) {
+        padding-right: 25px;
+      }
+    }
+
+    &:nth-child(4) {
+      @media (min-width: $screen-xl) {
+        padding-right: 25px;
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      @media (min-width: $screen-md) {
+        padding-left: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__section-item {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__title-item {
+    z-index: 2;
+    margin: 0;
+    padding-bottom: 28px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__section {
+    margin-top: 30px;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+}

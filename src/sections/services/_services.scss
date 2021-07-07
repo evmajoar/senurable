@@ -1,0 +1,119 @@
+.services {
+  padding: 50px 0;
+  @media (min-width: $screen-md) {
+    padding: 70px 0;
+  }
+  @media (min-width: $screen-xl) {
+    padding: 95px 0 115px;
+  }
+
+  &__inner {
+    @include container;
+  }
+
+  &__choice {
+    margin: 0;
+    margin-top: 15px;
+    text-align: center;
+    @media (min-width: $screen-md) {
+      margin-top: 30px;
+    }
+  }
+
+  &__tabs {
+    margin-top: 25px;
+    @media (min-width: $screen-md) {
+      margin-top: 10px;
+    }
+  }
+
+  &__tabs-item {
+    @media (min-width: $screen-md) {
+      max-width: 970px;
+      margin: 0 auto;
+    }
+    @media (min-width: $screen-xl) {
+      display: grid;
+      grid-template-columns: 465px minmax(auto, 455px);
+      justify-content: space-between;
+    }
+  }
+
+  &__item-title {
+    font-size: 18px;
+    color: $color-dark-grey;
+    @media (min-width: $screen-md) {
+      font-size: 21px;
+    }
+    @media (min-width: $screen-xl) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__item-description {
+    margin: 0;
+    margin-top: 15px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 10px;
+    }
+
+    &:first-of-type {
+      @media (min-width: $screen-md) {
+        margin-top: 25px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: 20px;
+    padding-bottom: 15px;
+    @media (min-width: $screen-md) {
+      margin-top: 35px;
+    }
+    @media (min-width: $screen-xl) {
+      grid-column-start: 2;
+      grid-row: 2 / 5;
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+
+  &__info-wrapper {
+    margin-right: -15px;
+  }
+
+  &__buttons {
+    margin: 0;
+    margin-top: 15px;
+    @media (min-width: $screen-md) {
+      margin-top: 35px;
+    }
+    @media (min-width: $screen-xl) {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+  }
+
+  &__btn-details {
+    @media (min-width: $screen-md) {
+      margin-right: 35px;
+    }
+  }
+
+  &__btn-calculate {
+    display: none;
+    @media (min-width: $screen-md) {
+      display: inline-flex;
+    }
+    //@media (min-width: $screen-xl) {
+    //  grid-column-start: 2;
+    //}
+  }
+}

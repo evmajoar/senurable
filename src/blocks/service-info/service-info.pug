@@ -1,0 +1,36 @@
+//- Все примеси в этом файле должны начинаться c имени блока (service-info)
+//- ВАЖНО! Файл содержит 2 миксина
+mixin service-info(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +landing()
+
+  //- подключаем файл со структурой данных блока
+  include service-info.data.pug
+
+  -
+  // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+    allMods = allMods + 'service-info--' + modsList[i].trim();
+    }
+    }
+
+  ul.service-info(class=allMods)&attributes(attributes)
+    each serviceInfoItem in serviceInfoList
+      +service-info-item(serviceInfoItem)
+
+
+mixin service-info-item(item)
+
+  li.service-info__item
+    span.service-info__wrapper-icon
+      svg.service-info__icon(width=item.iconSize.width, height=item.iconSize.height)
+        use(xlink:href='icons/sprite.svg#icon-' + item.iconId)
+    p.service-info__item-description
+      != item.text
+      span.service-info__value!= item.value
